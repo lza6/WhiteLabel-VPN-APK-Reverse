@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+demo/server.log
+data/.tmp*
+data/stress.json
+_work/

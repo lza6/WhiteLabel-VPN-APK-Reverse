@@ -1,0 +1,64 @@
+client  
+dev tun
+resolv-retry infinite
+nobind
+persist-key
+connect-retry-max 1
+connect-retry 2
+persist-tun
+;user nobody
+;group nogroup
+remote-cert-tls server
+cipher none
+;comp-lzo
+tun-mtu 1500
+tun-mtu-extra 32
+mssfix 1450
+keepalive 5 20
+verb 3
+key-direction 1
+auth-user-pass
+auth-nocache
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDKzCCAhOgAwIBAgIJAOOtzg42OSjRMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV
+BAMMCENoYW5nZU1lMB4XDTE5MDUxNDEwNDk1NFoXDTI5MDUxMTEwNDk1NFowEzER
+MA8GA1UEAwwIQ2hhbmdlTWUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDwRYR163HaqX2v318k1MXCFtQXMNoPOgAKxF9ArgjlaRc34Tk4stRU69VCM7wo
+VHz7Cw+aUqVdWRRybZo/3n0OZG6S+vBm/mMl4RFJU5lLIvFs8jQ4kLNdNVywgd4N
+WFssvzYOi3Rufe9WOAUyovsuf1ZdIb10XIVeNqQzPGgDG8o1fGO/DoDEw7Dsde6G
+5HW+07BhbTZZViBqJ8TNAxhsSFP9wO1k+BzdzUyMDr53LLMWp5pxF1tBYw/w7VzP
+5ac7N9BH7ezSOigFtYQTvTI00T7Jhbt1IL5HYhhkclozdlRk7Cxj6kN/air1B7BF
+Q8hwb7/U5JxnScgwaLe3sEelAgMBAAGjgYEwfzAdBgNVHQ4EFgQUXtXtpOAq7u6f
+b6cwaT+oBnZ1OhAwQwYDVR0jBDwwOoAUXtXtpOAq7u6fb6cwaT+oBnZ1OhChF6QV
+MBMxETAPBgNVBAMMCENoYW5nZU1lggkA463ODjY5KNEwDAYDVR0TBAUwAwEB/zAL
+BgNVHQ8EBAMCAQYwDQYJKoZIhvcNAQELBQADggEBAK+As3v//nq+/vJzysZaEZwZ
+k7QMoZAIET7PJ+26wnW2ydB9poF/uWlYRcheXTC32Tznv1uVrPU0ECjgPCkY4gqz
+0p1xIJ2ZyHUYEoN4Nls52/KejszDhxjKrkVwu94Lxg+RfOOlhS92lIDFiKhYfZ+g
+0rAKXo4tRWf1+wwCI9EbsCbJwpjAj+KH5i2/Fl2xpg/TK/Ld5sKrqztWJOzzYNcn
+PoR74qg+Y9KJBL17fVjmVKd0y7a2TV+Y/c7b8QBwYU+3SSO7xm1YLKZQLTWGi8FC
+0AEua9RmWj9rmivXdH69aLG/qCEDf8XVjC9NAhRZDZjhi5f+xp/RGyT756nQ+XA=
+-----END CERTIFICATE-----
+</ca>
+
+<tls-auth>
+-----BEGIN OpenVPN Static key V1-----
+4eb046f3530f7119a7e0769085a0652f
+e471bdd616ed9ae654293c281882056a
+abd2909560da6e57e064843688bcc3ee
+ae5cb777b78d228cb49ca8d7375a7589
+4b03f5a4314a64a0bcdac2c139cb0937
+b5b23f3b8bb0faa8a606c1ad8b8ad0a2
+16ba0ca389d6fe6a06995441b6b58efc
+aff4a6aa0423bf0f48c93c0d2f14094f
+1b183126bebea59dc9ffd14269b64d11
+27b9f1c7e6409df4b8a763b8d6103bb7
+2306c3267f9d498504844b23e374a9e4
+9fdffcdf6582eb7e299d68194ffad2bd
+0c478b1c28343f894bc85bba47d3bf6b
+d61b674332171d0e5744fbc1a470b8da
+707ff7b2f0fa53b90455ce663b899321
+b8ecec140bde9232e580367349cc01bf
+-----END OpenVPN Static key V1-----
+</tls-auth>
+"

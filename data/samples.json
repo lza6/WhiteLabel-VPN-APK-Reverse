@@ -1,0 +1,73 @@
+{
+  "generated": "2026-11-12",
+  "samples": [
+    {
+      "file": "ExpressVPN v12.71.0 (PREMIUM).apk",
+      "label": "名义 ExpressVPN，实为 SuperUnlimited（vpnsuper.com）白标",
+      "package": "com.free.vpn.super.hotspot.open",
+      "real_namespace": "com.superunlimited.*",
+      "versionName": "12.71.0",
+      "versionCode": 22802,
+      "minSdk": 26,
+      "targetSdk": 35,
+      "dex": 6,
+      "size_mb": 79.6,
+      "engines": ["Xray/V2Ray (libv2ray.so + libgojni.so)", "OpenVPN (libopenvpn.so)", "StrongSwan IKEv2 (libcharon/libipsec)", "Trojan (libtrojan.so)", "tun2socks"],
+      "protection": "无壳；自研 NativeLegacy.getKeyBytes + assets 静态加密",
+      "node_source": "account.vpnsuper.com 账号体系 API（需登录/设备注册）",
+      "assets_verified": "assets/open_readme 用 AES-128-ECB key=EasyVPNIKEV2Open 解密成功（已验证）",
+      "verdict": "协议栈最全，但节点需账号态；静态无法直接产出节点表"
+    },
+    {
+      "file": "Proxy Master v5.4.5 (Premium).apk",
+      "label": "Proxy Master / AllConnect SDK 白标",
+      "package": "com.free.vpn.proxy.master.app",
+      "real_namespace": "com.hotspot.vpn.* + com.free.connect.*",
+      "versionName": "5.4.5",
+      "versionCode": 545,
+      "minSdk": 24,
+      "targetSdk": 35,
+      "dex": 8,
+      "size_mb": 67.9,
+      "engines": ["sing-box (libbox.so, io.nekohasekai.sfa)", "私有 TLS+ 代理 (libnms.so / libuchannel.so startProxy)"],
+      "protection": "无壳；ApiConfig 由 Firebase RC 键 supertop_api_config 或 string 资源 ras 提供，再经 TlsPlusManager（native libsswanutils.so）解密",
+      "node_source": "AllConnect 初始化接口（InitResponse.location.free/vip + NodeResponse.NodeBean）",
+      "assets_verified": "assets/dic 为混淆字典；assets/p2p.json 为 BT 客户端黑名单",
+      "verdict": "数据模型最完整（NodeBean 字段已还原），但密钥链在 native，需动态取键"
+    },
+    {
+      "file": "VPN Proxy Master v2.3.6 [Premium].apk",
+      "label": "VPN Proxy Master（com.vpnmasterx.fast）",
+      "package": "com.vpnmasterx.fast",
+      "real_namespace": "com.vpnmasterx.*",
+      "versionName": "2.3.6",
+      "versionCode": 23031701,
+      "minSdk": 24,
+      "targetSdk": 33,
+      "dex": 3,
+      "size_mb": 32.7,
+      "engines": ["OpenVPN3 (libovpn3.so, 426 JNI)", "OpenVPN2 (libopenvpn.so)", "libstub.so + SignatureKiller（MT 管理器防重签）"],
+      "protection": "libnative.so 提供 encryptApi/decryptApi/encryptData/decryptData，算法为 AES/CFB/NoPadding，经 natiflect C++ 反射桥回调 Java Cipher",
+      "node_source": "protobuf 消息 VpnGetServersReq/Resp、VpnGetConnectionConfigReq/Resp（networklib 包）",
+      "assets_verified": "assets/websites/*.json 为浏览器站点白名单，非节点",
+      "verdict": "协议模型最清晰（protobuf + OpenVPN），密钥在 native，需动态取键或还原 native 密钥派生"
+    },
+    {
+      "file": "VPN v206 (Premium).apk",
+      "label": "StarNest VPN（com.starnest.vpnandroid）",
+      "package": "com.starnest.vpnandroid",
+      "real_namespace": "com.starnest.*",
+      "versionName": "206",
+      "versionCode": 206,
+      "minSdk": 26,
+      "targetSdk": 36,
+      "dex": 3,
+      "size_mb": 36.8,
+      "engines": ["ICS OpenVPN (de.blinkt.openvpn)"],
+      "protection": "assets/data + data_v1..v13（7.2MB，base64 后熵 8.00，AES 块对齐）",
+      "node_source": "OpenVPN 配置下发（导入 .ovpn/.conf）",
+      "assets_verified": "assets/data* 为 RecyclerView 绑定数据（rv_binddatas.xml），非节点表",
+      "verdict": "引擎单一，节点依赖服务端下发；本轮未定位到 API 主机"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "host": "account.getsuperulimited.com",
+    "status": 307,
+    "server": "cloudflare",
+    "ctype": null,
+    "len": null,
+    "peek": ""
+  },
+  {
+    "host": "account.vpnsuper.site",
+    "status": 307,
+    "server": "cloudflare",
+    "ctype": null,
+    "len": null,
+    "peek": ""
+  },
+  {
+    "host": "api.keysuccess.site",
+    "status": 405,
+    "server": "openresty",
+    "ctype": null,
+    "len": "21",
+    "peek": "{\"msg\":\"invalid uri\"}"
+  },
+  {
+    "host": "api.inmense.site",
+    "status": 405,
+    "server": "openresty",
+    "ctype": null,
+    "len": "21",
+    "peek": "{\"msg\":\"invalid uri\"}"
+  },
+  {
+    "host": "api.dollphoin.site",
+    "status": 405,
+    "server": "openresty",
+    "ctype": null,
+    "len": "21",
+    "peek": "{\"msg\":\"invalid uri\"}"
+  },
+  {
+    "host": "api.kickoffo.site",
+    "status": 405,
+    "server": "openresty",
+    "ctype": null,
+    "len": "21",
+    "peek": "{\"msg\":\"invalid uri\"}"
+  }
+]

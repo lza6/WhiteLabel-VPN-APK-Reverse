@@ -1,0 +1,14 @@
+{
+  "note": "来源为 APK dex 字符串池 + const-string 引用反查（tools/dex_ref.py），非猜测。confidence 为代码路径确定性。",
+  "endpoints": [
+    {"sample": "com.free.vpn.super.hotspot.open", "host": "account.getsuperulimited.com", "port": 443, "role": "账号门户（307 -> /en/），非节点接口", "confidence": "high"},
+    {"sample": "com.free.vpn.super.hotspot.open", "host": "account.vpnsuper.site", "port": 443, "role": "账号门户镜像（307 -> /en/）", "confidence": "high"},
+    {"sample": "com.free.vpn.super.hotspot.open", "host": "account.vpnsuper.com", "port": 443, "role": "账号门户主域（TLS 层被 RST，需特定 SNI/指纹）", "confidence": "high"},
+    {"sample": "com.free.vpn.super.hotspot.open", "host": "api.keysuccess.site", "port": 443, "role": "Bigo Ads 广告域（引用方 sg.bigo.ads.controller），已排除", "confidence": "excluded"},
+    {"sample": "com.free.vpn.proxy.master.app", "host": "api.inmense.site", "port": 443, "role": "Bigo Ads 广告域，已排除", "confidence": "excluded"},
+    {"sample": "com.free.vpn.proxy.master.app", "host": "api.dollphoin.site", "port": 443, "role": "Bigo Ads 广告域，已排除", "confidence": "excluded"},
+    {"sample": "com.free.vpn.proxy.master.app", "host": "api.kickoffo.site", "port": 443, "role": "Bigo Ads 广告域，已排除", "confidence": "excluded"},
+    {"sample": "com.free.vpn.proxy.master.app", "host": "api.fossiller.ru", "port": 443, "role": "Bigo Ads 自定义 host（SplashActivity 注入），已排除", "confidence": "excluded"},
+    {"sample": "com.vpnmasterx.fast", "host": "rx3.io", "port": 443, "role": "候选（字符串池唯一非 SDK 域名，DNS 不解析）", "confidence": "low"}
+  ]
+}

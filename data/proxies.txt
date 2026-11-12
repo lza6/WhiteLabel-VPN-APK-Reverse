@@ -1,0 +1,2 @@
+# 每行一个 socks5://host:port 或 socks5h://host:port；# 开头为注释
+# 本批四个样本尚未产出节点，池为空
