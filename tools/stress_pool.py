@@ -153,7 +153,7 @@ def main():
 
     urls = read_pool(args.pool)
     if not urls:
-        print(json.dumps({"entries": 0, "note": "池为空: %s" % args.pool}, ensure_ascii=False))
+        print(json.dumps({"entries": 0, "pool": args.pool, "note": "pool is empty"}))
         return 0
 
     thost, _, tport = args.target.rpartition(":")
